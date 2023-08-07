@@ -29,7 +29,7 @@ def update
   if @article.update(article_params)
     flash[:notice] = "Article was updated successfully."
     redirect_to @article
-  else
+    else
     render 'edit'
   end
 end
@@ -41,7 +41,7 @@ end
 
 private
 
-def set_articles
+def set_article
   @article = Article.find(params[:id])
 end
 
