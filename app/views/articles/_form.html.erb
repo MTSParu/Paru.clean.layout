@@ -14,6 +14,10 @@
   <%= f.label :description, class: "col-2 col-form-label text-light" %>
   <div class="col-10 mb-20">
   <%= f.text_area :description, rows: 10, class: "form-control shadow rounded", placeholder: "Discruption of articles" %>
+  <div class="check-box">
+  <%= check_box_tag "Publish", "yes" %>
+ <%= label_tag "Publish" %>
+ </div>
   </div>
   </div>
 
