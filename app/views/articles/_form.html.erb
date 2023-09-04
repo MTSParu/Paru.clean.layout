@@ -14,10 +14,12 @@
   <%= f.label :description, class: "col-2 col-form-label text-light" %>
   <div class="col-10 mb-20">
   <%= f.text_area :description, rows: 10, class: "form-control shadow rounded", placeholder: "Discruption of articles" %>
-  <div class="check-box">
-  <%= check_box_tag "Publish", "yes" %>
- <%= label_tag "Publish" %>
- </div>
+  </div>
+  </div>
+  <div class="form-group row">
+  <%= f.label :category, class: "col-2 col-form-label text-light" %>
+  <div class="col-10 mb-20 ">
+  <%= f.collection_select(:category_ids, Category.all, :id, :name, { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, size: 4, class: "form-select shadow rounded" } ) %> 
   </div>
   </div>
 
